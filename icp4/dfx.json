@@ -1,0 +1,23 @@
+{
+  "canisters": {
+    "backend": {
+      "type": "custom",
+      "main": "src/backend/backend.ts",
+      "candid": "src/backend/backend.did",
+      "wasm": "src/backend/.azle/backend.wasm",
+      "build": "npx azle backend"
+    },
+    "frontend": {
+      "type": "assets",
+      "source": ["dist"]
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
+
